@@ -1,0 +1,182 @@
+.menu-bar a {
+  color: black;
+}
+
+.menu-bar {
+  width: 100%;
+  z-index: 120;
+  padding: 15px;
+  position: fixed;
+  background: #fff;
+  border-bottom: 2px solid lightgray;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: row;
+}
+
+.controls-frame { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sidebar {
+  position: fixed;
+  width: 210px;
+  padding: 0px;
+  z-index: 100;
+  color: #fff;
+  height: 91.3222%;
+  margin: 65px 0px;
+  text-align: center;
+  background: lightslategray;
+}
+
+.sidebar ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.sidebar li {
+  padding: 17px 22px;
+}
+
+.sidebar li:hover {
+  color: #fff;
+  background: teal;
+}
+
+.sidebar a {
+  color: inherit;
+} 
+
+.main-content {
+  width: 1000px;
+  margin: 100px auto auto 270px;
+}
+
+.heading {
+  font-family: "Raleway Bold" !important;
+}
+
+.form-box {
+  border: 0px;
+  width: 300px;
+  padding: 20px 0px;
+}
+
+.image-view {
+  width: 150px;
+  height: 150px;
+  outline: none;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.upload-canvas {
+  width: 100%;
+  height: 420px;
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  margin: 30px 0px;
+  overflow: hidden;
+  border-radius: 6px;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px dashed lightgray;
+}
+
+.photo-item {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  margin: auto 20px;
+  border-radius: 2%;
+  border: 2px solid lightgray;
+}
+
+.photo-item > img {
+  width: 100%;
+  height: 100%;
+}
+
+.prompt-text {
+  margin: 160px auto;
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.actions > div {
+  width: 50%;
+}
+
+.actions > div:nth-child(2) {
+  text-align: right;
+}
+
+.gray {
+  color: lightgray;
+}
+
+.content-box {
+  display: flex;
+  margin: 5px auto;
+  flex-direction: row;
+}
+
+.content-box > div:nth-child(1) {
+  width: 30%;
+}
+
+.content-box > div:nth-child(2) {
+  padding: 0px 70px;
+}
+
+.label {
+  font-family: 'Raleway Bold';
+}
+
+.albums-box {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0px;
+  flex-direction: row;
+}
+
+.album-item {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  margin: auto 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album-item > .meta {
+  width: 170px;
+  color: teal;
+  margin: 10px auto;
+  padding: 6px 10px;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px dashed teal;
+}
+
+.album-item > .meta:hover {
+  color: #ffffff;
+  background: #e62955;
+  border: 1px dashed #ffffff;
+}
+
+.generic-container {
+  padding: 20px 0px;
+}

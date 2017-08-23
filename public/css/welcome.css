@@ -1,0 +1,73 @@
+body {
+  background: #f0f0f0;
+}
+
+.menu-bar {
+  width: 100%;
+  padding: 30px 25px;  
+}
+
+.content-box {
+  display: flex;
+  flex-flow: column;
+  padding: 10px 0px;
+  align-items: center;
+}
+
+
+.text-box {
+  display: flex;
+  padding: 70px 10px 15px 5px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.large-text {
+  font-size: 47px;
+}
+
+.medium-text {
+  font-size: 30px;
+}
+
+.caption {
+  padding: 40px;
+}
+
+.main-enclosure {
+  padding: 0px;
+  margin: 0px;
+}
+
+.controls {
+  display: flex;
+  margin: 30px 0px;
+  flex-direction: row;
+}
+
+.controls > div {
+  margin: 0px 15px;
+}
+
+.polaroid {
+  margin: 0px;
+  width: 140px;
+  height: 110px;
+  border: 10px solid #f2f2f2;
+}
+
+.polaroid:nth-child(1) {
+  transform: translateY(1.2em) translateX(2em) rotate(-29deg);
+}
+
+.polaroid:nth-child(2) {
+  transform: translateZ(1em);
+}
+
+.polaroid:nth-child(3) {
+  transform: translateX(-3em) translateY(1.2em) rotate(29deg);
+}
+
+.teal {
+  color: teal;
+}

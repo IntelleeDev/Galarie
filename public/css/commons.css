@@ -1,0 +1,113 @@
+@font-face {
+  font-family: Raleway;
+  src: url('../fonts/Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Raleway Thin";
+  src: url('../fonts/Raleway-Thin.ttf');
+}
+
+@font-face {
+  font-family: "Raleway Bold";
+  src: url('../fonts/Raleway-Bold.ttf');
+}
+
+body {
+  font-family: Raleway;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, 
+h2, h3, 
+h4, h5, h6 {
+  font-family: "Raleway Thin";
+}
+
+label {
+  display: block;
+  font-size: 15px;
+  margin: 10px auto;
+}
+
+.content-box {
+  display: flex;
+  flex-flow: column;
+  padding: 70px 0px;
+  align-items: center;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-box > div {
+  width: 50%;
+}
+
+.flex-box > div:nth-child(2) {
+  align-content: right;
+}
+
+.form-box {
+  width: 400px;
+  padding: 40px;
+  margin: 20px 0px;
+  border-radius: 11px;
+  border: 2px solid lightgray;
+}
+
+.error-box {
+  color: lightcoral;
+  padding: 10px 20px;
+}
+
+.large-text {
+  font-size: 56px;
+}
+
+.medium-text {
+  font-size: 30px;  
+}
+
+.small-text {
+  font-size: 23px;
+}
+
+.logo-text {
+  font-size: 20px;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.btn {
+  outline: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background: #e0e0e0;
+}
+
+.btn.btn-colored--green {
+  background: linear-gradient(to right, #076c2f,#007c31);
+}
+
+.btn.btn-colored--green:focus {
+  background: #076c2f;
+}
+
+.btn.btn-colored--navyblue {
+  background: #032758;
+}
+
+.full-width {
+  width: 100%;
+}
