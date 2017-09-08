@@ -2,34 +2,29 @@
 
 @section('css')
   <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
   <section>
-    <header class="menu-bar">
-      <div class="flex-box">
-        <div>
-          <a href="{{ route('home') }}">
-            <h2>Galarie</h2>
-          </a>
-        </div>
-        <div>
-          <div class="controls-frame ui right aligned">
-            <form method="POST" action="{{ route('logout')}}">
-              {{ csrf_field() }}
-              <button class="ui small teal button" type="submit">logout</button>
-            </form>
-            <div>
-              <h4>{{ Auth::user()->name }}</h4>
-            </div>
-          </div>
-        </div>
-      </div>    
-    </header>
-
-    <section class="content-area">
-      @include('dash.sidebar')
+    @include('dash.header')
+    @include('dash.sidebar')
+    <br>
+    <div class="content-frame">
       @yield('main-content')
-    </section>
+    </div>
   </section>
+@endsection
+
+@section('scripts')
+  <script>
+    window.addEventListener('load', function(event) {
+      var logoutBtn = document.getElementById('logout'),
+          logoutForm = document.getElementById('logoutForm')
+
+      logoutBtn.addEventListener('click', function(event) {
+        logoutForm.submit()
+      })
+    })
+  </script>
 @endsection

@@ -1,7 +1,7 @@
 @extends('dash.master')
 
 @section('main-content')  
-  <section class="main-content">
+  <section class="center-box">
     <section class="actions">
       <div>
         <h3 class="small-text">Albums</h3>

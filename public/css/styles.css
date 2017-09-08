@@ -1,0 +1,44 @@
+.album-grid-frame {
+  display: flex;
+  flex-flow: column;
+}
+
+.album-grid-frame > div {
+  overflow: hidden;
+  position: relative;
+}
+
+.album-grid-frame > div:nth-child(1) {
+  height: 410px;
+}
+
+.meta-overlay {
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  z-index: 90;
+  padding: 25px;
+  color: #ffffff;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.42);
+}
+
+.meta-overlay > div {
+  flex: 1 1 auto;
+}
+
+.meta-overlay > div:nth-child(2) {
+  text-align: right;
+}
+
+.album-row {
+  display: flex;
+  margin: 20px auto;
+  flex-flow: row wrap;
+}
+
+.album-row > div {
+  width: 50%;
+  height: 50%;
+  flex: 1 1 auto;
+}

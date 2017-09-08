@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Album;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,6 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dash.home');
+        $user = Auth::user();
+        $featuredAlbum = $user->albums()->orderBy('id', 'desc')->first();
+
+        $albums = $user->albums()->where('id', '<>', $featuredAlbum->id)->get();
+
+        return view('dash.home', compact('featuredAlbum', 'albums'));
     }
 }

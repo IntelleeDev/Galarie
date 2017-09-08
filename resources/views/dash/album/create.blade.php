@@ -1,7 +1,7 @@
 @extends('dash.master')
 
 @section('main-content')
-  <section class="main-content">
+  <section class="center-box">
     <header class="actions">
       <div>
         <h3 class="small-text">New album</h3>
@@ -10,7 +10,7 @@
         <a href="{{ url('albums') }}" class="ui tiny teal button"><i class="arrow left icon"></i>back</a>
       </div>
     </header>
-    <section class="form-box">
+    <section style="box-shadow: none" class="form-box">
       <div>
         <form id="new_album_form" class="ui small form" action="{{ route('new_album') }}" method="POST" enctype="multipart/form-data">
           {{ csrf_field() }}

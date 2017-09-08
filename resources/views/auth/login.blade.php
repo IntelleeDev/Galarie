@@ -2,12 +2,12 @@
 
 @section('content')
   <section class="content-box">
-    <header>
-      <a style="color: teal" href="{{ url('/') }}">
-        <h3 class="large-text">Galarie</h3>
-      </a>
-    </header>
     <div class="form-box">
+      <div class="head">
+        <h3>
+          <a style="color: teal" class="large-text" href="{{ url('/') }}">Galarie</a>
+        <h3>
+      </div>
       <form class="ui form" method="POST" action="{{ route('login') }}">
         {{ csrf_field() }}
         <div class="field">
@@ -28,9 +28,14 @@
                 <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }} tabindex="0" class="hidden">
                 <label>Remember me</label>
               </div>
-              <a style="margin-left: 80px" href="{{ route('password.request') }}">forgot password</a>
+              <a style="margin-left: 80px;" href="{{ route('password.request') }}">Forgot password</a>
             </div>  
           </div>          
+        </div>
+        <div style="margin: 20px 0px 5px 0px; text-align: center">
+          <strong>
+            Not a member yet <a href="{{ route('register') }}">sign up</a>
+          </strong>
         </div>
       </form>
     </div>

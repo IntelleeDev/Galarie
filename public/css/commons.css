@@ -38,7 +38,7 @@ label {
 .content-box {
   display: flex;
   flex-flow: column;
-  padding: 70px 0px;
+  padding: 50px 0px;
   align-items: center;
 }
 
@@ -59,8 +59,12 @@ label {
   width: 400px;
   padding: 40px;
   margin: 20px 0px;
-  border-radius: 11px;
-  border: 2px solid lightgray;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.23);
+}
+
+.form-box .head {
+  margin: 10px 0px 30px 0px;
+  text-align: center;
 }
 
 .error-box {
@@ -69,7 +73,7 @@ label {
 }
 
 .large-text {
-  font-size: 56px;
+  font-size: 46px;
 }
 
 .medium-text {

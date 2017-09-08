@@ -2,12 +2,12 @@
 
 @section('content')
   <section class="content-box">
-    <header>
-      <a style="color: teal" href="{{ url('/') }}">
-        <h3 class="large-text">Galarie</h3>
-      </a>
-    </header>
     <div class="form-box">
+      <div class="head">
+        <h3>
+          <a style="color: teal" class="large-text" href="{{ url('/') }}">Galarie</a>
+        <h3>
+      </div>
       <form class="ui form" method="POST" action="{{ route('register') }}">
         {{ csrf_field() }}
         <div class="field">
@@ -28,6 +28,11 @@
         </div>
         <div class="field">
           <button class="ui teal button full-width" type="submit">register</button>
+        </div>
+        <div style="margin: 20px 0px 5px 0px; text-align: center">
+          <strong>
+            Already a member <a href="{{ route('login') }}">sign in</a>
+          </strong>
         </div>
       </form>
     </div>

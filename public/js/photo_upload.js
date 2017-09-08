@@ -19,7 +19,7 @@
         var fileReader = new FileReader()
         fileReader.addEventListener('load', function(event) {
           var photoItem = $('<div/>', { class: 'photo-item' })
-              selectedImage = $('<img/>', { src: fileReader.result })
+              selectedImage = $('<img/>', { class: 'ui fluid image', src: fileReader.result })
 
           photoItem.append(selectedImage)
           disposableDiv.append(photoItem)
