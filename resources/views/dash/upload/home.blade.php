@@ -9,18 +9,18 @@
       <div></div>
     </header>
     <section class="albums-box">
-    @if (count($albums) > 0)
-      @foreach($albums as $album)
-        <div class="album-item">
-          <div>
-            <img class="ui fluid rounded image" src="{{ Storage::url($album->album_cover) }}" alt="image">
+    @forelse($albums as $album)
+      <div class="album-item">
+        <a href="{{ route('upload',['album' => $album->id]) }}">
+          <img class="ui fluid image" src="{{ Storage::url($album->album_cover) }}">
+          <div class="ui basic yellow curved-edge button meta">
+            {{ $album->title  }}
           </div>
-          <a href="{{ '/upload/photo/'.$album->id }}" class="meta">
-            <h4>{{ $album->title }}</h4>
-          </a>
         </div>
-      @endforeach
-    @endif
+      </a>
+    @empty
+     @include('dash.noalbum')
+    @endforelse
     </section>
   </section>
 @endsection

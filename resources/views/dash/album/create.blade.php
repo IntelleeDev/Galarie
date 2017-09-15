@@ -7,10 +7,10 @@
         <h3 class="small-text">New album</h3>
       </div>
       <div>
-        <a href="{{ url('albums') }}" class="ui tiny teal button"><i class="arrow left icon"></i>back</a>
+        <a href="{{ url('albums') }}" class="ui tiny yellow curved-edge button"><i class="arrow left icon"></i>back</a>
       </div>
     </header>
-    <section style="box-shadow: none" class="form-box">
+    <section class="form-box">
       <div>
         <form id="new_album_form" class="ui small form" action="{{ route('new_album') }}" method="POST" enctype="multipart/form-data">
           {{ csrf_field() }}
@@ -20,13 +20,13 @@
                 <img  id="imageview" class="image-view">
                 <input id="album_cover" type="file" name="album_cover" accepts=".jpg .jpeg .gif .png" hidden>
                 <div style="margin: 20px auto">
-                  <button id="album_cover_btn" class="ui tiny teal button"><i class="cloud upload icon"></i>upload</button>
+                  <button id="album_cover_btn" class="ui tiny teal curved-edge button"><i class="cloud upload icon"></i>upload</button>
                 </div>
               </div>
           </div>
           <div class="field">
             <label for="title">Title</label>
-            <input type="text" name="title" value="{{ old('title') }}" autofocus required>
+            <input class="curved-edge" type="text" name="title" value="{{ old('title') }}" autofocus required>
           </div>
           <div class="inline field">
             <label for="description">Description</label>
@@ -34,10 +34,10 @@
           </div>
           <div class="field">
             <label for="tags">Tags</label>
-            <input type="text" name="tags" value="{{ old('tags') }}">
+            <input class="curved-edge" type="text" name="tags" value="{{ old('tags') }}">
           </div>
           <div class="field">
-            <button type="submit" class="ui small teal button full-width"><i class="plus icon"></i>create</button>
+            <button type="submit" class="ui small teal curved-edge full-width button"><i class="plus icon"></i>create</button>
           </div>
         </form>
       </div>

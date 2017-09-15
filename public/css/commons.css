@@ -13,6 +13,10 @@
   src: url('../fonts/Raleway-Bold.ttf');
 }
 
+.button {
+  font-family: Raleway !important;
+}
+
 body {
   font-family: Raleway;
   margin: 0px !important;
@@ -35,11 +39,8 @@ label {
   margin: 10px auto;
 }
 
-.content-box {
-  display: flex;
-  flex-flow: column;
-  padding: 50px 0px;
-  align-items: center;
+.brand {
+  font-size: 24px;
 }
 
 .flex-box {
@@ -51,6 +52,10 @@ label {
   width: 50%;
 }
 
+.teal {
+  color: teal;
+}
+
 .flex-box > div:nth-child(2) {
   align-content: right;
 }
@@ -58,8 +63,9 @@ label {
 .form-box {
   width: 400px;
   padding: 40px;
-  margin: 20px 0px;
-  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.23);
+  margin: 10% auto auto auto;
+  border-radius: 25px;
+  border: 2px solid #e1e1e1;
 }
 
 .form-box .head {
@@ -68,12 +74,21 @@ label {
 }
 
 .error-box {
+  width: 400px;
   color: lightcoral;
   padding: 10px 20px;
 }
 
+.spacer {
+  margin: 30px auto auto auto;
+}
+
 .large-text {
-  font-size: 46px;
+  font-size: 39px;
+}
+
+.gray {
+  color: #e1e1e1;
 }
 
 .medium-text {
@@ -84,34 +99,41 @@ label {
   font-size: 23px;
 }
 
-.logo-text {
-  font-size: 20px;
+.tiny-text {
+  font-size: 18px;
 }
 
 .white {
   color: #ffffff;
 }
 
-.btn {
-  outline: none;
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 3px;
-  background: #e0e0e0;
-}
-
-.btn.btn-colored--green {
-  background: linear-gradient(to right, #076c2f,#007c31);
-}
-
-.btn.btn-colored--green:focus {
-  background: #076c2f;
-}
-
-.btn.btn-colored--navyblue {
-  background: #032758;
-}
-
 .full-width {
   width: 100%;
+}
+
+.curved-edge {
+  border-radius: 50px !important;
+}
+
+.padded {
+  padding-right: 40px !important;
+  padding-left: 40px !important;
+}
+
+.info {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  margin: 50px auto auto auto;
+}
+
+.left-radi {
+  border-top-left-radius: 18px !important;
+  border-bottom-left-radius: 18px !important;
+}
+
+.right-radi {
+  border-top-right-radius: 18px !important;
+  border-bottom-right-radius: 18px !important;
 }

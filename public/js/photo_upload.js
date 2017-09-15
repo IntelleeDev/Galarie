@@ -18,12 +18,17 @@
         var file = files[i]
         var fileReader = new FileReader()
         fileReader.addEventListener('load', function(event) {
-          var photoItem = $('<div/>', { class: 'photo-item' })
+          var photoItem = $('<div/>', { class: 'photo-item' }),
+              loadingIndicator = $('<div/>', { class: 'ui tiny active inline loader'})
               selectedImage = $('<img/>', { class: 'ui fluid image', src: fileReader.result })
 
           photoItem.append(selectedImage)
           disposableDiv.append(photoItem)
           uploadCanvas.append(disposableDiv.children().unwrap())
+        })
+
+        fileReader.addEventListener('progress', function(event) {
+          alert('working')
         })
         fileReader.readAsDataURL(file)
       }())

@@ -14,30 +14,43 @@
   </head>
   <body>
     <header class="menu-bar">
-      <h3 class="logo-text">Galarie</h3>
+      <h3 class="white brand">Galarie</h3>
     </header>
-    <section class="content-box">
-      <header class="caption">
-        <h2 class="large-text teal">Create awesome moments</h2>
-      </header>
-      <div class="polaroid-box">
-        <img class="polaroid" src="{{ asset('images/sky.jpg') }}" alt="apples">
-        <img class="polaroid" src="{{ asset('images/ocean.jpg') }}" alt="journey">
-        <img class="polaroid" src="{{ asset('images/safari.jpg') }}" alt="lecrea">
-        <img class="polaroid" src="{{ asset('images/safari.jpg') }}" alt="lecrea">
-      </div>
-      <div class="deep-canvas">
-        <div class="text-box">
-          <h3 class="small-text">Keep track of all your photos</h3>
+    <section class="ui container">
+      <div class="ui stackable center aligned relaxed grid">        
+        <div class="row">
+           <header class="caption">
+            <h2 class="white large-text">Create awesome moments</h2>
+          </header>
         </div>
-      </div>
-      <div class="controls">
-        <div>
-           <a class="ui small basic teal button" href="{{ route('login') }}">sign in</a>
-        </div>
-        <div>
-          <a class="ui small basic teal button" href="{{ route('register') }}">sign up</a>
-        <div>
+        <div class="row">
+          <div>
+            <div class="polaroid">
+              <img src="{{ asset('images/background3.jpg') }}" alt="apples">
+            </div>
+            <div class="polaroid">
+              <img src="{{ asset('images/safari.jpg') }}" alt="apples">
+            </div>
+            <div class="polaroid">
+              <img src="{{ asset('images/ocean.jpg') }}" alt="apples">
+            </div>       
+          </div>
+        </div>  
+        <div class="row">
+          <div class="spacer">
+            <h3 class="white small-text">share your treasured memories</h3>
+          </div>
+        </div>             
+        <div class="row">
+          <div class="controls">
+            <div>
+              <a class="ui large teal curved-edge padded button" href="{{ route('login') }}"><i class="sign in icon"></i>sign in</a>
+            </div>
+            <div>
+              <a class="ui large teal curved-edge padded button" href="{{ route('register') }}"><i class="user o icon"></i>sign up</a>
+            <div>
+          </div>
+        </div>        
       </div>  
     </section>
   </body>

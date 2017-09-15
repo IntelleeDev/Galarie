@@ -1,7 +1,4 @@
 <aside class="sidebar">
-  <header class="header">
-    <h2><a href="{{ route('home') }}">Galarie</a></h2>
-  </header>
   <ul>
     <a href="{{ route('home') }}">
       <li><i class="browser icon"></i>&nbsp;&nbsp;Wall</li>

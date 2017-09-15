@@ -12,22 +12,22 @@
         {{ csrf_field() }}
         <div class="field">
           <label for="name">Name</label>
-          <input type="text" name="name" value="{{ old('name') }}" placeholder="Fullname" autofocus required>
+          <input class="curved-edge" type="text" name="name" value="{{ old('name') }}" placeholder="Fullname" autofocus required>
         </div>
         <div class="field">
           <label for="email">Email</label>
-          <input type="email" name="email" value="{{ old('email') }}" placeholder="JohnDave@somemail.com" required>
+          <input class="curved-edge" type="email" name="email" value="{{ old('email') }}" placeholder="JohnDave@somemail.com" required>
         </div>
         <div class="field">
           <label for="password">Password</label>
-          <input type="password" name="password" value="{{ old('password') }}" required>
+          <input class="curved-edge" type="password" name="password" value="{{ old('password') }}" required>
         </div>
         <div class="field">
           <label for="name">Confirm password</label>
-          <input type="password" name="password_confirmation" value="{{ old('password_confirmation') }}" required>
+          <input class="curved-edge" type="password" name="password_confirmation" value="{{ old('password_confirmation') }}" required>
         </div>
         <div class="field">
-          <button class="ui teal button full-width" type="submit">register</button>
+          <button class="ui teal button curved-edge full-width" type="submit">register</button>
         </div>
         <div style="margin: 20px 0px 5px 0px; text-align: center">
           <strong>

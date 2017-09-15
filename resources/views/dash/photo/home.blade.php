@@ -7,14 +7,16 @@
         <h3 class="small-text">{{ $album->title }}</h3>
       </div>
       <div>
-        <a href="{{ route('albums') }}" class="ui tiny teal button"><i class="arrow left icon"></i>back</a>
+        <a href="{{ route('albums') }}" class="ui tiny yellow curved-edge button"><i class="arrow left icon"></i> back</a>
       </div>
     </header>
     <section class="generic-container">
       <div class="ui small rounded images">
-        @foreach ($photos as $photo)
+        @forelse ($photos as $photo)
           <img class="ui rounded image" src="{{ Storage::url($photo->store_path) }}"/>
-        @endforeach
+        @empty
+          @include('dash.nophotos')
+        @endforelse
       </div>
     </section>
   </section>

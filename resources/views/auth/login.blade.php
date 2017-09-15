@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-  <section class="content-box">
+  <section class="ui container">
     <div class="form-box">
       <div class="head">
         <h3>
@@ -12,14 +12,14 @@
         {{ csrf_field() }}
         <div class="field">
           <label for="email">E-mail Address</label>
-          <input type="email" name="email" value="{{ old('email') }}"  placeholder="johndoe@mail.com" required autofocus>
+          <input class="curved-edge" type="email" name="email" value="{{ old('email') }}"  placeholder="johndoe@mail.com" required autofocus>
         </div>
         <div class="field">
           <label for="password">Password</label>
-          <input type="password" name="password" required>
+          <input class="curved-edge" type="password" name="password" required>
         </div>
         <div class="field">
-          <button class="ui teal button full-width" type="submit">login</button>
+          <button class="ui teal button curved-edge full-width" type="submit">login</button>
         </div>
         <div>
           <div class="inline field">
@@ -38,8 +38,8 @@
           </strong>
         </div>
       </form>
+      @include('layouts.errors')
     </div>
-    @include('layouts.errors')
   </section>
 @endsection
 

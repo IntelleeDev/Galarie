@@ -45,4 +45,10 @@ class AlbumController extends Controller
         Auth::user()->albums()->save($album);
         return redirect('/home');
     }
+
+    public function delete(Album $album) 
+    {
+        Album::destroy($album->id);
+        return redirect()->route('albums');
+    } 
 }

@@ -17,18 +17,20 @@
           <img class="ui image" src="{{ Storage::url($featuredAlbum->album_cover) }}" alt="background">        
         </div>
       @else
-        
+        @include('dash.lonely')
       @endif
     </div>
-    <h3>Your collections</h3>
-    
-    <div class="album-row">
-      @foreach ($albums as $album)
-        <div>
-          <img class="ui fluid image" src="{{ Storage::url($album->album_cover) }}" alt="{{ $album->title }}"/>
-        </div>
-      @endforeach
-    </div>
-  
+
+    @if ($albums)
+      <h3>Your collections</h3>
+      <div class="album-row">
+        @foreach ($albums as $album)
+          <div>
+            <img class="ui fluid image" src="{{ Storage::url($album->album_cover) }}" alt="{{ $album->title }}"/>
+          </div>
+        @endforeach
+      </div>
+    @endif
+      
   </section>
 @endsection

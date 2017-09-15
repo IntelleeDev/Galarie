@@ -26,10 +26,15 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $featuredAlbum = $user->albums()->orderBy('id', 'desc')->first();
-
-        $albums = $user->albums()->where('id', '<>', $featuredAlbum->id)->get();
-
+        try {
+            $featuredAlbum = $user->albums()->orderBy('id', 'desc')->first();
+            $albums = $user->albums()->where('id', '<>', $featuredAlbum->id)->get();
+        }
+        catch(\Exception $e) {
+            $albums = NULL;
+            $featuredAlbum = NULL;
+            return view('dash.home', compact('featuredAlbum', 'albums'));
+        }        
         return view('dash.home', compact('featuredAlbum', 'albums'));
     }
 }

@@ -12,13 +12,15 @@
           {{ csrf_field() }}
           <input id="photo_input_field" type="file" name="photos[]" multiple hidden>
         </form>
-        <button id="submit_button" class="ui small teal button" type="submit"><i class="upload icon"></i>upload</button>
-        <a class="ui small teal button" href="{{ url('upload/select-album') }}"><i class="arrow left icon"></i> back </a>
+        <div class="ui icon buttons">
+          <a class="ui small yellow button left-radi" href="{{ url('upload/select-album') }}"><i class="arrow left icon"></i></a>
+          <button id="submit_button" class="ui small yellow button right-radi" type="submit"><i class="upload icon"></i></button>
+        </div>        
       </div>
     </header>
     <section id="upload_canvas" class="upload-canvas">      
       <div class="prompt-text">
-        <h2 class="medium-text gray">Click to open file dialog</h2>
+        <h2 class="ui primary curved-edge padded button">Click to open file dialog</h2>
       </div>     
     </section>
   </section>

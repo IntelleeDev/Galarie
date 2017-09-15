@@ -1,8 +1,10 @@
 @extends('layouts.master')
 
 @section('css')
+  <link href="{{ asset('css/commons.css') }}" rel="stylesheet">
   <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
   <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+ 
 @endsection
 
 @section('content')
