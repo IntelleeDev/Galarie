@@ -149,3 +149,7 @@ label {
 .settings-heading {
   font-family: 'Raleway Bold' !important;
 }
+
+.circular.button {
+  border-radius: 100%;
+}

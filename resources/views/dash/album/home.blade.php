@@ -20,12 +20,13 @@
           <img src="{{ Storage::url($album->album_cover) }}" alt="album cover">
         </div>
         <div class="content">
-          <form data-albumid="{{ $album->id }}" id="deleteForm" hidden action="#" method="POST">
+          <form style="display: inline-block; padding: 0px 0px 0px 10px" class="right floated" action="{{ route('delete_album', ['album' => $album->id]) }}" method="POST">
             {{ csrf_field() }}
             {{ method_field('DELETE') }}
+            <button class="ui tiny red icon circular button"><i class="trash icon"></i></button>
           </form>
-          <button class="delete right floated ui tiny red icon button"><i class="trash icon"></i></button>
-          <a class="right floated ui tiny yellow icon button" href="/album/{{ $album->id }}/photos"><i class="folder open icon"></i></a>
+                            
+          <a class="right floated ui tiny yellow icon circular button" href="/album/{{ $album->id }}/photos"><i class="folder open icon"></i></a>
           <div class="header">
             <h4 class="heading">{{ $album->title }}</h4>
           </div>

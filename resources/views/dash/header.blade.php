@@ -4,15 +4,13 @@
       <h3 class="teal brand">Galarie</h3>
     </div>
     <div style="text-align: right">
-      <span>
-        <form id="logoutForm" hidden method="POST" action="{{ route('logout') }}">
-          {{ csrf_field() }}
-        </form>
-      </span>
       <div class="name-text padded-12">
         <span><i class="icon user"></i>  {{ Auth::user()->name }}</span>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span id="logout" class="ui teal icon button"><i class="white power icon"></i></span>
+        <form style="display: inline" method="POST" action="{{ route('logout') }}">
+          {{ csrf_field() }}
+          <button type="submit" class="ui teal icon circular button"><i class="white power icon"></i></button>
+        </form>
       </div>
     </div>
   </div>

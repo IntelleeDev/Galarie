@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class SettingsController extends Controller
 {
-    public function construct()
+    public function __construct()
     {
         $this->middleware('auth');
     }

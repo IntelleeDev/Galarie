@@ -17,16 +17,3 @@
     </div>
   </section>
 @endsection
-
-@section('scripts')
-  <script>
-    window.addEventListener('load', function(event) {
-      var logoutBtn = document.getElementById('logout'),
-          logoutForm = document.getElementById('logoutForm')
-
-      logoutBtn.addEventListener('click', function(event) {
-        logoutForm.submit()
-      })
-    })
-  </script>
-@endsection

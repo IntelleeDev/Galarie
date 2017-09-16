@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Photo;
 use App\Album;
+use App\Interfaces\AlbumRepository;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,14 +14,14 @@ class UploadController extends Controller
 {
     private $photosBaseDir = 'photos';
     
-    public function construct() 
+    public function __construct() 
     {
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(AlbumRepository $albumRepository)
     {
-        $albums = Auth::user()->albums;
+        $albums = $albumRepository->getAlbumsByUser(Auth::user()->id);
         return view('dash.upload.home')->with('albums', $albums);
     }
 
