@@ -137,3 +137,15 @@ label {
   border-top-right-radius: 18px !important;
   border-bottom-right-radius: 18px !important;
 }
+
+.teal-background {
+  background: teal;
+}
+
+.padded-12 {
+  padding: 12px 8px;
+}
+
+.settings-heading {
+  font-family: 'Raleway Bold' !important;
+}

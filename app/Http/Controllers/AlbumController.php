@@ -12,6 +12,11 @@ class AlbumController extends Controller
 {
     private $albumCoverDir = 'covers';
 
+    public function __constructor() 
+    {
+        $this->middleware('auth');
+    }
+
     public function index() 
     {
         $albums = Auth::user()->albums()->orderBy('created_at', 'desc')->get();

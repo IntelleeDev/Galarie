@@ -43,6 +43,6 @@ class UploadController extends Controller
             $album->photos()->save($photo);
         }
 
-        return redirect()->route('upload_photo', ['album' => $album->id]);
+        return redirect()->route('upload', ['album' => $album->id]);
     }
 }
